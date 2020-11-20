@@ -31,10 +31,12 @@ public class FirstServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		throw new ServletException("GET method is not supported.");
+		//response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Authentication Failed: ");
 		// TODO Auto-generated method stub
-		PrintWriter out = response.getWriter();
-		Date date = new Date();
-		out.println("<html><body><h2>La hora es:</h2><br/><h3>Date="+date +"</h3></body></html>");
+//		PrintWriter out = response.getWriter();
+//		Date date = new Date();
+//		out.println("<html><body><h2>La hora es:</h2><br/><h3>Date="+date +"</h3></body></html>");
 	}
 
 	/**

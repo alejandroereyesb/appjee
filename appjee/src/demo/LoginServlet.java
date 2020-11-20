@@ -63,7 +63,7 @@ public class LoginServlet extends HttpServlet {
 		//Sustituir por lineas 50 y 51 la consulta de usuario
 		//....
 		
-//		1- Filtro de login
+//		1- Filtro de login: Mira USER + PASSWORD
 //		2- Filtro de ROL --> OK
 //		3- Ejecuta lo que quede en el Servlet
 		

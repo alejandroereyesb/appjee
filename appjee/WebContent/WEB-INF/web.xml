@@ -5,6 +5,26 @@
   	<welcome-file>login.html</welcome-file>
 <!--     <welcome-file>index.jsp</welcome-file> -->
   </welcome-file-list>
+  
+   <error-page>
+  	<error-code>404</error-code>
+  	<location>/AppExceptionHandler</location>
+  </error-page>
+  
+  <error-page>
+  	<error-code>500</error-code>
+  	<location>/AppExceptionHandler</location>
+  </error-page>
+  
+  <error-page>
+	  <exception-type>javax.servlet.ServletException</exception-type>
+	  <location>/AppExceptionHandler</location>
+  </error-page>
+  
+  <context-param>
+    <param-name>tempfile.dir</param-name>
+    <param-value>tmpfiles</param-value>
+  </context-param>
    
  <filter>  
   <filter-name>FilterLoginDemo</filter-name>  
@@ -15,7 +35,7 @@
   <filter-class>demo.FilterRole</filter-class>  
  </filter>  
  
- 
+
   <filter-mapping>  
   <filter-name>FilterLoginDemo</filter-name>  
   <url-pattern>/LoginServlet</url-pattern>  
